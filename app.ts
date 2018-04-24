@@ -1,7 +1,7 @@
 import * as Server from "./config/servidor";
 import * as Database from "./config/database";
 import * as App from "./src";
-//teste
+
 console.log(`Running enviroment ${process.env.NODE_ENV || "dev"}`);
 
 //Starting Application Server
