@@ -7,7 +7,6 @@ export interface IPessoaModel extends Document {
   telefones: number;
   nif: number;
   id_usuario: Schema.Types.ObjectId; 
-  token?: string;
 }
 
 export const PessoaSchema = new Schema({
@@ -16,7 +15,7 @@ export const PessoaSchema = new Schema({
   datadenascimento: { type: Number,  required: [true, 'Data de nascimento é obrigatório.'] },
   telefones: { type: Number, required: [true, 'Telefone é obrigatorio.'] },
   nif: { type: Number, required: [true, 'Nif é obrigatorio.']},
-  id_usuario: { type: Schema.Types.ObjectId, required:[true,]},
+  id_usuario: { type: Schema.Types.ObjectId, required:[true,''], ref: 'Usuario'},
 
 });
 
