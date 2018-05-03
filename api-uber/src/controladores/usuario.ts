@@ -30,13 +30,14 @@ export default class Usuario {
     
     UsuarioModel.create(req.body)
       .then(usuarios => {
-        res.send(usuarios);
+        res.send('Usuario foi adicionado do BD');
+        console.log('Usuario foi adicionado do BD')
       })
       .catch(error => {
         console.log(`Error: ${error}`);
         res.sendStatus(500);
       });
-  }
+  }/*
   public async atualizar(req: Express.Request, res: Express.Response) {
     try {
       const example: IExampleRequest = {
@@ -50,7 +51,7 @@ export default class Usuario {
     } catch (error) {
       res.status(ErrorUtil.generateHttpCode(error)).send(error.errors);
     }
-  }
+  }*/
  }
 
 
